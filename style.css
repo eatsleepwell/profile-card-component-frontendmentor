@@ -1,0 +1,146 @@
+:root {
+  /* Primary */
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+
+  /* Neutral */
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font size (name and stats): 18px */
+/* card */
+/* 325 x 375 */
+
+body {
+  width: 100%;
+  font-family: "Kumbh Sans";
+  background-color: var(--darkCyan);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 325px;
+  height: 375px;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+section .bg {
+  width: 100%;
+  height: 140px;
+  background-image: url(images/bg-pattern-card.svg);
+  border-radius: 10px 10px 0 0;
+}
+
+section .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+section .profile img {
+  margin-top: -50px;
+  width: 115px;
+  height: 115px;
+  border-radius: 100%;
+  border: 5px solid white;
+}
+
+section .profile .desc {
+  display: flex;
+  gap: 10px;
+  margin: 22px 0 10px;
+}
+
+section .profile .place {
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+section .profile .desc h2 {
+  font-weight: 700;
+}
+
+section .profile .desc h2,
+section .profile .desc span {
+  font-size: 19px;
+}
+
+section .profile .desc span,
+section .profile .place {
+  color: var(--darkGrayishBlue);
+}
+
+section .profile .stats {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid hsla(227, 10%, 46%, 0.2);
+  width: 100%;
+  padding: 25px 20px;
+}
+
+section .profile .stats .followers,
+section .profile .stats .likes,
+section .profile .stats .photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+section .profile .stats .followers span:nth-child(1),
+section .profile .stats .likes span:nth-child(1),
+section .profile .stats .photos span:nth-child(1) {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+section .profile .stats .followers span:nth-child(2),
+section .profile .stats .likes span:nth-child(2),
+section .profile .stats .photos span:nth-child(2) {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.bg-top,
+.bg-down {
+  position: relative;
+  z-index: -1;
+}
+
+.bg-top img,
+.bg-down img {
+  position: absolute;
+}
+
+.bg-top img {
+  top: -750px;
+  left: -800px;
+}
+
+.bg-down img {
+  top: 250px;
+  left: 50px;
+}
